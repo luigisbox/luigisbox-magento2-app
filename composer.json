@@ -2,7 +2,7 @@
   "name": "luigisbox/magento2-integration",
   "description": "Luigi's Box product discovery services integration",
   "type": "magento2-module",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "license": ["MIT"],
   "autoload": {
     "files": [ "registration.php" ],
