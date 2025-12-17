@@ -50,7 +50,7 @@ class CreateIntegration implements DataPatchInterface
      */
     public static function getVersion()
     {
-        return '1.3.1'; // Specify your module version here.
+        return '1.3.2'; // Specify your module version here.
     }
 }
 

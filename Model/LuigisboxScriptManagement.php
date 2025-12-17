@@ -46,17 +46,29 @@ class LuigisboxScriptManagement implements \Luigisbox\Integration\Api\LuigisboxS
      */
     public function postLuigisboxScript()
     {
-        $body = $this->request->getBodyParams();
-        $scopeId = $body["scope_id"];
-        $scriptTag = $body["script_tag"];
+    $body = $this->request->getBodyParams();
+    $scopeId = $body["scope_id"];
+    $newScriptTag = $body["script_tag"];
 
-        $html_header = $this->scopeConfig->getValue("design/head/includes", ScopeInterface::SCOPE_STORES, $scopeId);
-        if (!str_contains($html_header, $scriptTag)) {
-            $updatedValue= $html_header . $scriptTag;
-            $this->_configWriter->save("design/head/includes", $updatedValue, ScopeInterface::SCOPE_STORES, $scopeId);
-            $this->cacheManager->flush($this->cacheManager->getAvailableTypes());
-        }
+    // FIX: Add '??' to ensure this is always a string, never null
+    $html_header = $this->scopeConfig->getValue("design/head/includes", ScopeInterface::SCOPE_STORES, $scopeId) ?? '';
 
-        return "OK";
+    // Regex: Finds any script tag containing 'luigisbox'
+    $pattern = '/<script[^>]*luigisbox.*?<\/script>/is';
+
+    if (preg_match($pattern, $html_header)) {
+        // REPLACE existing
+        $updatedValue = preg_replace($pattern, $newScriptTag, $html_header);
+    } else {
+        // APPEND new
+        $updatedValue = $html_header . $newScriptTag;
     }
+
+    if ($updatedValue !== $html_header) {
+        $this->_configWriter->save("design/head/includes", $updatedValue, ScopeInterface::SCOPE_STORES, $scopeId);
+        $this->cacheManager->flush(['config', 'layout', 'full_page']);
+    }
+
+    return "OK";
+}
 }

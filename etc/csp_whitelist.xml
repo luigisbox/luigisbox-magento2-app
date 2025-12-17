@@ -3,26 +3,26 @@
     <policies>
         <policy id="script-src">
             <values>
-                <value id="luigisbox-scripts-script-src" type="host">https://scripts.luigisbox.com</value>
-                <value id="luigisbox-cdn-script-src" type="host">https://cdn.luigisbox.com</value>
-                <value id="luigisbox-live-script-src" type="host">https://live.luigisbox.com</value>
-                <value id="luigisbox-api-script-src" type="host">https://api.luigisbox.com</value>
+                <value id="luigisbox-scripts-script-src" type="host">https://scripts.luigisbox.tech</value>
+                <value id="luigisbox-cdn-script-src" type="host">https://cdn.luigisbox.tech</value>
+                <value id="luigisbox-live-script-src" type="host">https://live.luigisbox.tech</value>
+                <value id="luigisbox-api-script-src" type="host">https://api.luigisbox.tech</value>
             </values>
         </policy>
         <policy id="style-src">
             <values>
-                <value id="luigisbox-scripts-style-src" type="host">https://scripts.luigisbox.com</value>
-                <value id="luigisbox-cdn-style-src" type="host">https://cdn.luigisbox.com</value>
-                <value id="luigisbox-live-style-src" type="host">https://live.luigisbox.com</value>
-                <value id="luigisbox-api-style-src" type="host">https://api.luigisbox.com</value>
+                <value id="luigisbox-scripts-style-src" type="host">https://scripts.luigisbox.tech</value>
+                <value id="luigisbox-cdn-style-src" type="host">https://cdn.luigisbox.tech</value>
+                <value id="luigisbox-live-style-src" type="host">https://live.luigisbox.tech</value>
+                <value id="luigisbox-api-style-src" type="host">https://api.luigisbox.tech</value>
             </values>
         </policy>
         <policy id="connect-src">
             <values>
-                <value id="luigisbox-scripts-connect-src" type="host">https://scripts.luigisbox.com</value>
-                <value id="luigisbox-cdn-connect-src" type="host">https://cdn.luigisbox.com</value>
-                <value id="luigisbox-live-connect-src" type="host">https://live.luigisbox.com</value>
-                <value id="luigisbox-api-connect-src" type="host">https://api.luigisbox.com</value>
+                <value id="luigisbox-scripts-connect-src" type="host">https://scripts.luigisbox.tech</value>
+                <value id="luigisbox-cdn-connect-src" type="host">https://cdn.luigisbox.tech</value>
+                <value id="luigisbox-live-connect-src" type="host">https://live.luigisbox.tech</value>
+                <value id="luigisbox-api-connect-src" type="host">https://api.luigisbox.tech</value>
             </values>
         </policy>
     </policies>

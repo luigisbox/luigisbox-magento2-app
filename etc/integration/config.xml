@@ -1,7 +1,7 @@
 <integrations>
     <integration name="LuigisboxIntegration">
-        <email>support@luigisbox.com</email>
-        <endpoint_url>https://app.luigisbox.com/magento/install</endpoint_url>
-        <identity_link_url>https://app.luigisbox.com/magento/form</identity_link_url>
+        <email>support@luigisbox.net</email>
+        <endpoint_url>https://app.luigisbox.tech/magento/install</endpoint_url>
+        <identity_link_url>https://app.luigisbox.tech/magento/form</identity_link_url>
     </integration>
 </integrations>
