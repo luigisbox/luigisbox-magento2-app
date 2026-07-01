@@ -86,8 +86,8 @@ class ProductCustomAttributesLuigi implements ResolverInterface
         Field $field,
         $context,
         ResolveInfo $info,
-        array $value = null,
-        array $args = null
+        ?array $value = null,
+        ?array $args = null
     ) {
         // If the classes exist, we can compute product's custom attributes
         if ($this->getAttributeValue && $this->getFilteredAttributes) {

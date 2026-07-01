@@ -40,7 +40,7 @@ class ParentProducts implements \Luigisbox\Integration\Api\ParentProductsInterfa
         Configurable $configurable,
         Grouped $grouped,
         Selection $bundle,
-        \Magento\Catalog\Api\ProductRepositoryInterface $productRepository,
+        \Magento\Catalog\Api\ProductRepositoryInterface $productRepository
     ) {
         $this->request = $request;
         $this->configurable = $configurable;
